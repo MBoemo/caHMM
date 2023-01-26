@@ -1,0 +1,11 @@
+#library and objects
+*.o
+*.a
+
+#backups
+.*swp
+.*swo
+.*swm
+
+tests/simpleHMM
+tests/stateSort

@@ -15,7 +15,7 @@ The algorithms that the library provides are:
 Note that caHMM has been written to the C++11 standard.  All testing and development was done using GCC v5.4.0 on Ubuntu 16.04.
 
 ### Installation and Testing
-After cloning the repository, nagivate to the Penthus directory and build the library by running:
+After cloning the repository, nagivate to the caHMM directory and build the library by running:
 ```shell
 make
 ```
@@ -33,13 +33,13 @@ NormalDistribution nd( double mean, double standardDeviation );
 UniformDistribution ud( double a, double b );
 SilentDistribution sd( 0, 0 );
 State st( Distribution *distPointer, std::string stateName, std::string stateTether, double weight );
-HiddenMarkovModel hmm( unsigned int numberOfEmissionStates, unsigned int numberofSilentStates );
+HiddenMarkovModel hmm();
 ```
-Arguments to the HiddenMarkovModel constructor are optional.  If you know the total number of emitting and silent states that you need, Pentus will allocate memory appropriately.  However, if the number of states is determined at run time, Penthus can allocate memory on the fly.
+
 
 We can do the following with a HiddenMarkovModel object:
 ```c++
-HiddenMarkovModel hmm;
+HiddenMarkovModel hmm();
 hmm.add_state( State myState ); //adds a state object to the HMM object
 hmm.add_transition( State myFirstState, State mySecondState, double p ); //state myFirstState can transition to mySecondState with probability p
 hmm.finalise(); //must be called before any HMM algorithms (forward, backward, Viterbi, Baum-Welch) are called
