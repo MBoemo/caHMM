@@ -11,9 +11,6 @@ The algorithms that the library provides are:
 - Viterbi,
 - Baum-Welch.
 
-### Compatibility
-Note that caHMM has been written to the C++11 standard.  All testing and development was done using GCC v5.4.0 on Ubuntu 16.04.
-
 ### Installation and Testing
 After cloning the repository, nagivate to the caHMM directory and build the library by running:
 ```shell

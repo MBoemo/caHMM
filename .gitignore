@@ -7,5 +7,7 @@
 .*swo
 .*swm
 
+.depend
+
 tests/simpleHMM
 tests/stateSort
